@@ -5,9 +5,9 @@ let switchDoor = true
 //Sets a variable to count amount of time correct
 let rightAnswers = 0
 
-if(typeof(trials) != "number" || typeof(switchDoor) != "boolean"){
+if (typeof(trials) != "number" || typeof(switchDoor) != "boolean") {
   console.log("Please ensure that you have entered a number for trials and true/false for switchDoor")
-} else{
+} else {
   for (let i = trials; i > 0; --i) {
     //Picks out random doors when called on
     const ranDoorPicker = () => {
@@ -32,15 +32,15 @@ if(typeof(trials) != "number" || typeof(switchDoor) != "boolean"){
     let switchedDoor = 6 - personDoor - eliminatedDoor;
 
     //adds points to overall score
-    if (switchDoor == true){
+    if (switchDoor == true) {
       if (switchedDoor == computerDoor) {
         ++rightAnswers;
       }
     } else if (switchDoor == false) {
-      if (personDoor == computerDoor){
+      if (personDoor == computerDoor) {
         ++rightAnswers;
       }
     }
   }
-  console.log("Percent correct: " + (rightAnswers * 100)/trials + "%")
+  console.log("Percent correct: " + (rightAnswers * 100) / trials + "%")
 }
