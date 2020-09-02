@@ -1,3 +1,4 @@
+//Needs some cleaning up
 //The controls for the simulation
 let trials = 100000
 let switchDoor = true
